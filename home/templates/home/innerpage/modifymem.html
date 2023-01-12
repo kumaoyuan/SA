@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳志郎 | SIGNUP</title>
+    <style>
+        @import url('{% static "css/publicversion.css"%}');
+        @import url('{% static "css/modifymem.css"%}');
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <header>
+            <div class="ho">
+                <a href="../index/"><img src="{% static 'img/logo.png'%}" alt="logo圖" class="logo"></a>
+                <a href="../noticenter/"><img src="{% static 'img/alarm2.png'%}" alt="alarm鍵" class="alarm"></a>
+            </div>
+            <div class="splitline"></div>
+        </header>
+        <div class="none2"></div>
+        <!--會員名稱、帳號、密碼、手機、EMAIL、照片、背板、寵物顯示、地址-->
+        <main>
+            <div class="title">會員資料修改</div>
+            <form action="../modifymem1/" method="GET">
+                姓名：<input type="text" value="{{memberName}}" class="ipt" name="name">
+                <br><br>帳號：<label>{{Ac}}</label>
+                <br><br>密碼：<input type="password" placeholder="********" class="ipt" name="pw">
+                <br><br>手機：<input type="tel" value="{{memTel}}" class="ipt" name="tel">
+                <br><br>email : <input type="email" value="{{memEml}}" class="ipt" name="email">
+                <br><br>地址：<input type="text" value="{{memAdr}}" class="ipt" name="adr">
+                <br><input type="submit" value="確認" class="bt">
+            </form>
+            <form enctype="multipart/form-data">
+                個人背景：<input type="file" accept="image/gif, image/jpeg, image/png" class="ipt">
+                <br><br>個人頭像：<input type="file" accept="image/gif, image/jpeg, image/png" class="ipt">
+                <br><br>寵物顯示：<input type="file" accept="image/gif, image/jpeg, image/png" class="ipt">
+                <br><input type="button" value="確認" class="bt">
+            </form>
+        </main>
+    </div>
+    <div class="none"></div>
+    
+
+    <footer>
+        <div class="fo">
+            <a href="../index/"><img src="{% static 'img/home.png'%}" alt="home鍵" class="f"></a>
+            <a href="../member/"><img src="{% static 'img/member.png'%}" alt="member鍵" class="f"></a>
+            <a href="../ccmgt/"><img src="{% static 'img/creditcard.png'%}" alt="creditcard鍵" class="f"></a>
+            <a href="../shop/"><img src="{% static 'img/store.png'%}" alt="store鍵" class="f"></a>
+            <a href="../settings/"><img src="{% static 'img/setting.png'%}" alt="setting鍵" class="f"></a>
+        </div>
+    </footer>
+</body>
+
+</html>

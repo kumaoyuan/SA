@@ -1,0 +1,44 @@
+/**{  
+    outline: solid red 1px;
+}*/
+
+
+main{
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+}
+.logtitle{
+    font-size: 45px;
+    padding: 15px;
+    color: #263c34;
+}
+.logbg{
+    height: 300px;
+    width: 300px;
+    background-color: #cacaca;
+    border-radius: 10px;
+    margin: auto;
+}
+.logdiv{
+    padding:20% 0;
+}
+.logint{
+    font-size: 20px;
+}
+.logip{
+    width: 150px;
+    font-size: 20px;
+    border: solid gray 1px;
+}
+.logbt{
+    width: 100px;
+    height: 30px;
+    margin: 20px auto 5px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.logof{
+    font-size: 10px;
+    color: darkgreen;
+}

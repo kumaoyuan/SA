@@ -1,0 +1,61 @@
+section{
+    width: 100%;
+    text-align: center;
+}
+
+/*信用卡*/
+.creditbar{
+    width: 80%;
+    height: 50px;
+    margin: 20px auto 5px;
+    background-color: #eaeaea;
+    border-radius: 10px;
+    padding: 6px;
+}
+.cname{
+    font-weight: bolder;
+    font-size: 20px;
+}
+.cnum{
+    font-size: 18px;
+}
+.arrow{
+    width: 30px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.ctext{
+    color: #eaeaea;
+}
+
+/*QR扣*/
+.qrcode{
+    border: solid 1px lightgray;
+    width: 200px;
+    height: 200px;
+    background-image: url('../img/qr1.png');
+    background-size: cover;
+    margin: 40px auto 10px;
+}
+.update{
+    width: 80%;
+    margin: auto;
+    font-size: 18px;
+    color: lightgray;
+}
+.udpic{
+    width: 25px;
+}
+
+/*bar扣*/
+.barcode{
+    height: 100px;
+    background-image: url('../img/barcode1.png');
+    background-size: cover;
+    margin: 30px auto 10px;
+}
+.barnum{
+    font-weight: bolder;
+    font-size: 18px;
+}

@@ -1,0 +1,26 @@
+main{
+    width: 100%;
+}
+.of{
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+}
+.carnum{
+    font-size: 20px;
+}
+.bt{
+    font-size: 20px;
+}
+#bt1{
+    width: 80px;
+    margin-top: 10px;
+}
+#bt2{
+    width: 220px;
+    margin-top: 40px;
+    padding: 15px;
+}
+.addcar_pic{
+    text-align: center ;
+}

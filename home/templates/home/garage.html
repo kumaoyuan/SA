@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳志郎 | Car</title>
+    <style>
+        @import url('{% static "css/publicversion.css"%}');
+        @import url('{% static "css/shop.css"%}');
+        @import url('{% static "css/garage.css"%}');
+    </style>
+</head>
+
+<body>
+    {% if messages %}
+        <script>
+            {%for msg in messages %}
+            alert('{{msg.message}}');
+            {% endfor %}
+        </script>
+    {% endif %}
+    <div class="bg">
+        <header>
+            <div class="ho">
+                <a href="../index/"><img src="{% static 'img/logo.png'%}" alt="logo圖" class="logo"></a>
+                <a href="../noticenter/"><img src="{% static 'img/alarm2.png'%}" alt="alarm鍵" class="alarm"></a>
+            </div>
+            <div class="splitline"></div>
+        </header>
+
+        <div class="none2"></div>
+
+        <main>
+            <div class="main">
+                <!--搜尋欄-->
+                <div class="search">
+                    <div class="search_box">
+                        <input class="search_bar" type="text" name="search" placeholder="搜尋">
+                        <button class="search_btn"><img src="{% static 'img/search.png'%}"
+                                style="height:100%;width:100%"></button>
+                    </div>
+                    <div class="m1_point">
+                        <h1 class="m1_text">{{point}}</h1>
+                        <div class="m1_pic">
+                            <img src="{% static 'img/coins.png'%}" style="height:100%;width:100%">
+                        </div>
+                    </div>
+                </div>
+
+                <!--標頭-->
+                <h2 class="garage_text">GARAGE</h2>
+                <a href="../addcar/"><button class="addcar_btn">新增車輛</button></a>
+
+                <!--種類一-->
+                <h2 class="garage_text1">/My Cars/</h2>
+                <div class="shop">
+                    <!--1-1-->
+                    {%for car in cars %}
+                    <div class="garage1">
+                        <a href="../car1/?n={{ forloop.counter }}"><img src="{% static car.carImg%}" style="height:100%;width:100%"></a>
+                        <div class="shop_text">
+                            <p class="garage_text_texts">{{car.carNum}}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <!--1-2-->
+                    
+
+
+            <!--
+                    !--1-3--
+                    <div class="garage1">
+                        <img src="{% static 'img/porsche3.jpg'%}" style="height:100%;width:100%">
+                        <div class="shop_text">
+                            <p class="garage_text_texts"></p>
+                        </div>
+                    </div>
+                </div>
+
+                !--種類二--
+                <h2 class="garage_text1">/Maserati/</h2>
+                <div class="shop">
+                    !---2-1--
+                    <div class="garage1">
+                        <img src="{% static 'img/maserati1.jpg'%}" style="height:100%;width:100%">
+                        <div class="shop_text">
+                            <p class="garage_text_texts">MC20</p>
+                        </div>
+                    </div>
+
+                    !---2-2--
+                    <div class="garage1">
+                        <img src="{% static 'img/maserati2.png'%}" style="height:100%;width:100%">
+                        <div class="shop_text">
+                            <p class="garage_text_texts">Levante</p>
+                        </div>
+                    </div>
+            -->
+                </div>
+                <div class="none"></div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="fo">
+                <a href="../index/"><img src="{% static 'img/home.png'%}" alt="home鍵" class="f"></a>
+                <a href="../member/"><img src="{% static 'img/member.png'%}" alt="member鍵" class="f"></a>
+                <a href="../ccmgt/"><img src="{% static 'img/creditcard.png'%}" alt="creditcard鍵" class="f"></a>
+                <a href="../shop/"><img src="{% static 'img/store.png'%}" alt="store鍵" class="f"></a>
+                <a href="../settings/"><img src="{% static 'img/setting.png'%}" alt="setting鍵" class="f"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

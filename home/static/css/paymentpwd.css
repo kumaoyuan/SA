@@ -1,0 +1,49 @@
+.main{
+    width: 100%;
+}
+.outf{
+    width: 80%;
+    margin: 20px auto;
+}
+
+/*instruction*/
+.inst1{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.inst2{
+    color: #d8d8d8;
+}
+
+/*輸入pwd*/
+.pwdout{
+    width: 100%;
+}
+.pwd{
+    width: 70%;
+    font-size: 20px;
+    margin: 15px 0 10px 0;
+}
+.subbt{
+    width: 20%;
+    font-size: 18px;
+}
+
+/*forget pwd*/
+.forgetpwd{
+    float: right;
+    border: none;
+    background-color: transparent;
+}
+
+/*faceid*/
+.faceid{
+    width: 100px;
+    font-size: 14px;
+    padding: 5px;
+    margin-top: 40px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

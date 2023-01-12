@@ -1,0 +1,46 @@
+main{
+    width: 100%;
+}
+/*個人qr*/
+.perqr{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: #cacaca;
+    margin: 20px auto;
+}
+.perqrc{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background-image: url(../img/addfriqr.png);
+    background-size: cover;
+}
+.pername{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/*電話加友*/
+.add{
+    margin-top: 50px;
+    text-align: center;
+}
+.atext{
+    font-size: 18px;
+}
+.telinput{
+    width: 200px;
+    font-size: 20px;
+    margin: 10px;
+    border: none;
+    border-bottom: solid 1px  #113916;
+    background-color: transparent;
+}
+.telbt{
+    font-size: 18px;
+    width: 60px;
+    border: none;
+    background-color:  #113916;
+    color: white;
+}

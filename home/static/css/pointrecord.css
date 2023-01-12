@@ -1,0 +1,87 @@
+/**{  
+    outline: solid red 1px;
+}*/
+
+/*點數紀錄*/
+main{
+    width: 100%;
+}
+.ptotal{
+    background-color: #b9b9b9;
+    border-radius: 15px;
+    height: 60px;
+    width: 300px;
+    margin: 20px auto 10px;
+    font-size: 25px;
+    font-weight: bolder;
+    line-height: 60px;
+    text-align: center;
+}
+.spiltline2{
+    border-top: solid #cacaca;
+    width: 90%;
+    height: 1px;
+    margin: auto;
+}
+
+/*歷史紀錄*/
+section{
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+.wholer{
+    width: 300px;
+    margin: 20px auto;
+}
+.record{
+    width: 280px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto 0;
+    padding: 0 0 10px 0;
+    border-bottom: solid #cacaca 2px;
+    cursor: pointer;
+}
+.pointpic{
+    background-color: #e3e399;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.reinfo{
+    width: 170px;
+}
+.info1{
+    font-size: 20px;
+}
+.info2{
+    font-size: 16px;
+}
+.cal{
+    font-size: 20px;
+    font-weight: bolder;
+    line-height: 50px;
+}
+
+/*展開明細*/
+.panel{
+    display: none;
+    width: 260px;
+    margin: auto;
+    padding: 10px;
+    background-color: #cacaca;
+    border-radius: 5px;
+}
+ul{
+    margin-left: 20px;
+}
+
+.none{
+    height: 80px;
+}

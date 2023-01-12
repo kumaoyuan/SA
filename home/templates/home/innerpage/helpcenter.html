@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳志郎 | HELP CENTER</title>
+    <style>
+        @import url('{% static "css/publicversion.css"%}');
+        @import url('{% static "css/helpcenter.css"%}');
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="{% static 'js/helpcenter.js'%}"></script>
+</head>
+
+<body>
+    <div class="bg">
+        <header>
+            <div class="ho">
+                <a href="../index/"><img src="{% static 'img/logo.png'%}" alt="logo圖" class="logo"></a>
+                <a href="../noticenter/"><img src="{% static 'img/alarm2.png'%}" alt="alarm鍵" class="alarm"></a>
+            </div>
+            <div class="splitline"></div>
+        </header>
+        <div class="none2"></div>
+        <main>
+            <div class="title1">常見問題</div>
+            <div class="of">
+                <!--q1-->
+                <div class="wholeq">
+                    <div class="question" id="q1">
+                        [新手上路] 註冊帳號時，我的手機號碼已被註冊
+                    </div>
+                    <div class="panel" id="p1">
+                        <label>因一組手機號碼只能綁定一個蝦皮會員帳號，為了提供用戶更好的使用體驗，現在您可以自行修改手機號碼要綁定的蝦皮帳號。</label>
+                        <br><br><label>如果您不確定手機是綁定於舊帳號，或是門號曾經持有者註冊過帳號，只要輸入正確發送至手機的驗證碼並完成驗證，系統會自動將舊帳號解綁，將您的手機號碼綁定至本次設定的帳號。</label>
+                    </div>
+                </div>
+
+                <!--q2-->
+                <div class="wholeq">
+                    <div class="question" id="q2">
+                        [公告] 系統相關維護公告
+                    </div>
+                    <div class="panel" id="p2">
+                        <label>[最後更新日期: 2022/12/27 09:00]</label>
+                    </div>
+                </div>
+
+                <!--q3-->
+                <div class="wholeq">
+                    <div class="question" id="q3">
+                        [遊戲] 寵物飼養維護公告
+                    </div>
+                    <div class="panel" id="p3">
+                        <label>遊戲過程中如遇畫面閃退、當機、卡頓、頁面載入太久等狀況，可能因網路連線、環境、手機版本等因素影響，建議您先確認網路狀況與是否為最新版本的碳志郎。</label>
+                    </div>
+                </div>
+
+                <!--q4-->
+                <div class="wholeq">
+                    <div class="question" id="q4">
+                        [碳點相關] 如何使用／折抵碳點？
+                    </div>
+                    <div class="panel" id="p4">
+                        <label>
+                            您可以使用你的碳點在：
+                            <ul>
+                                <li>兌換商店優惠券</li>
+                                <li>兌換碳點享優惠裡的服務</li>
+                                <li>寵物飼養遊戲</li>
+                            </ul>
+                        </label>
+                    </div>
+                </div>
+
+                <!--q5-->
+                <div class="wholeq">
+                    <div class="question" id="q5">
+                        [寵物遊戲] 什麼是寵物遊戲？
+                    </div>
+                    <div class="panel" id="p5">
+                        <label>該遊戲由碳志郎官方推出，所有碳志郎用戶都能在符合遊戲規則的情況下，透過遊戲獲得碳點或優惠券。</label>
+                        <br><br>
+                        <label>如果玩遊戲期間有遇到異常，可以嘗試關閉並重啟碳志郎App，如需要其他協助，可以聯繫碳志郎客服。</label>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <!--問題回報-->
+                <form>
+                    <fieldset>
+                        <legend>問題回報</legend>
+                        <label class="title">使用者信箱：</label><input type="email" class="emip">
+                        <br><br>
+                        <label class="title">問題描述：</label>
+                        <br><textarea class="qip" placeholder="問題描述"></textarea>
+                        <br><br>
+                        <input type="submit" value="送出" class="bt">
+                    </fieldset>
+                </form>
+
+                <!--客服資訊-->
+                <div class="csinfo">
+                    <h2>客服資訊</h2>
+                    <label>客服專線：02-2733-3333</label>
+                    <br><label>服務時段：08:00 ~ 18:00</label>
+                </div>
+
+
+                <div class="none"></div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="fo">
+                <a href="../index/"><img src="{% static 'img/home.png'%}" alt="home鍵" class="f"></a>
+                <a href="../member/"><img src="{% static 'img/member.png'%}" alt="member鍵" class="f"></a>
+                <a href="../ccmgt/"><img src="{% static 'img/creditcard.png'%}" alt="creditcard鍵" class="f"></a>
+                <a href="../shop/"><img src="{% static 'img/store.png'%}" alt="store鍵" class="f"></a>
+                <a href="../settings/"><img src="{% static 'img/setting.png'%}" alt="setting鍵" class="f"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

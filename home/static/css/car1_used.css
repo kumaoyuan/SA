@@ -1,0 +1,26 @@
+/**{  
+    outline: solid red 1px;
+}*/
+
+main{
+    height: auto;
+    width:410px;
+    margin: auto;
+}
+.car_main_main{
+    text-align: center;
+    color:white;
+    font-size: 18px;
+    font-weight: bolder;
+    line-height: 25px;
+    margin: 20px 0px;
+    letter-spacing: 2px;
+}
+.car_pic_title{
+    position: absolute;
+    top:120px;
+    left:100px;
+    letter-spacing: 15px;
+    color:rgba(255, 255, 255, 0.743);
+    font-size: 45px;
+}

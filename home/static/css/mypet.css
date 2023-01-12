@@ -1,0 +1,109 @@
+/**{  
+    outline: solid red 1px;
+}*/
+main{
+    width: 100%;
+}
+
+/*幫助中心*/
+.helpof{
+    width: 90%;
+    margin: 10px auto; 
+}
+.help{
+    width: 35px;
+    height: 35px;
+    background-image: url('../img/pethelp.png');
+    background-size: cover;
+    float: right;
+}
+
+/*寵物*/
+.petext{
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+.petname{
+    border: none;
+    border-bottom: solid 2px #113916;
+    font-size: 40px;
+    width: 220px;
+    background-color: transparent;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.petname::placeholder{
+    color: gray;
+    font-weight: bolder;
+}
+.pettype{
+    font-size: 20px;
+}
+.petpic{
+    height: 300px;
+    width: 300px;
+    margin: 20px auto;
+    background-image: url('../img/pet1.png');
+    background-size: cover;
+}
+
+/*飼養進度*/
+.progress{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.probarof{
+    height: 25px;
+    width: 300px;
+    border: solid 1px #113916;
+    border-radius: 10px;
+    margin: auto;
+}
+.probar{
+    display: block;
+    background-color: #113916;
+    float: left;
+    height: 100%;
+    border-radius: 10px;
+}
+.protext{
+    font-size: 18px;
+    text-align: center;
+    color: #113916;
+    margin-bottom: 10px;
+}
+.probt{
+    font-size: 20px;
+    width: 80px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    color: white;
+    background-color: #113916;
+}
+
+/*寵物倉庫*/
+.warehouseof{
+    width: 90%;
+    margin: auto;
+}
+.wh{
+    width: 80px;
+    text-align: center;
+    float: right;
+}
+.whpic{
+    height: 60px;
+    width: 60px;
+    background-image: url('../img/warehouse.png');
+    background-size: cover;
+    margin: auto;
+}
+.whtext{
+    color: #113916;
+}
+
+.none{
+    height: 80px;
+}

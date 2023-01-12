@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳志郎 | 911 Dakar</title>
+    <style>
+        @import url('{% static "css/publicversion.css"%}');
+        @import url('{% static "css/car1.css"%}');
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <header>
+            <div class="ho">
+                <a href="../index/"><img src="{% static 'img/logo.png'%}" alt="logo圖" class="logo"></a>
+                <a href="../noticenter/"><img src="{% static 'img/alarm2.png'%}" alt="alarm鍵" class="alarm"></a>
+            </div>
+            <div class="splitline"></div>
+        </header>
+        <div class="none2"></div>
+        <main>
+            <div class="main">
+                <h2 class="car_title">\ {{carName}} /</h2>
+                <div class="car_pic">
+                    <img src="{% static carImg%}" style="height:100%;width:100%">
+                </div>
+                <div class="car_main">
+                    <h2>排氣量：{{carEv}}cm³</h2>
+                    <form action="../car1_used/" method="get">
+                    <div class="car_main_text1">
+                        <h2>使用時長：{{usetime}}min</h2>
+                        <input type=Hidden name="useTime" value={{usetime}}>
+                    </div>
+                    <div class="car_main_text3">
+                        <h2>車牌號碼：{{carNum}}</h2>
+                    </div>
+                    <div class="car_main_text3">
+                        <h2>當前碳點:{{point}}</h2>
+                    </div>
+                    <div class="car_main_text3">
+                        <h2>預估扣除碳點:{{usepoint}}</h2>
+                    </div>
+                    <input type="hidden" value="{{num}}" name="num">
+                </div>
+                <div align="center">
+                    <button class="car_btn">確認租借</button>
+                </div>
+                </form>
+                <div class="none"></div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="fo">
+                <a href="../index/"><img src="{% static 'img/home.png'%}" alt="home鍵" class="f"></a>
+                <a href="../member/"><img src="{% static 'img/member.png'%}" alt="member鍵" class="f"></a>
+                <a href="../ccmgt/"><img src="{% static 'img/creditcard.png'%}" alt="creditcard鍵" class="f"></a>
+                <a href="../shop/"><img src="{% static 'img/store.png'%}" alt="store鍵" class="f"></a>
+                <a href="../settings/"><img src="{% static 'img/setting.png'%}" alt="setting鍵" class="f"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

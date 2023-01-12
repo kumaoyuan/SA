@@ -1,0 +1,22 @@
+.main{
+    width: 100%;
+}
+.settitle{
+    width: 70%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 30px auto;
+}
+.setting{
+    background-color: #113916;
+    color: #cacaca;
+    border-radius: 10px;
+    height: 50px;
+    width: 70%;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    margin: 30px auto;
+    padding: 10px;
+}

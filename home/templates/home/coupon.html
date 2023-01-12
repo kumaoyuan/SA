@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳志郎 | AI智慧喜coupon</title>
+    <style>
+        @import url('{% static "css/publicversion.css"%}');
+        @import url('{% static "css/shop.css"%}');
+        @import url('{% static "css/good1.css"%}');
+        @import url('{% static "css/coupon.css"%}');
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <header>
+            <div class="ho">
+                <a href="../index/"><img src="{% static 'img/logo.png'%}" alt="logo圖" class="logo"></a>
+                <a href="../noticenter/"><img src="{% static 'img/alarm2.png'%}" alt="alarm鍵" class="alarm"></a>
+            </div>
+            <div class="splitline"></div>
+        </header>
+        <div class="none2"></div>
+        <main>
+            <div class="main">
+                <div class="search">
+                    <div class="search_box">
+                        <input class="search_bar" type="text" name="search" placeholder="搜尋">
+                        <button class="search_btn"><img src="{% static 'img/search.png'%}" style="height:100%;width:100%"></button>
+                    </div>
+                    <div class="m1_point">
+                        <h1 class="m1_text">334</h1>
+                        <div class="m1_pic">
+                            <img src="{% static 'img/coins.png'%}" style="height:100%;width:100%">
+                        </div>      
+                    </div>
+                </div>
+                <div class="good1">
+                    <img src="{% static 'img/wash.jpg'%}" style="height:100%;width:100%">
+                    <input type="button" value="♡" id="m3_s1_button">
+                    <div class="good1_text">
+                        <p class="good1_text_texts">點擊進入AI智慧喜</p>
+                    </div>
+                </div>
+                <div class="coupon_t">
+                    <img src="{% static 'img/coupon.png'%}" style="height:60px;width:60px">
+                    <p class="c_t_t">優惠券</p>
+                </div>
+                <div class="coupon_content">
+                    <div class="coupon_content1">
+                        <p class="c_content1_text1">碳點加乘券(+0.03%)</p>
+                        <p class="c_content1_text2">兌換點數:100<img src="{% static 'img/coins.png'%}" style="height:16px;width:16px;"></p>
+                    </div>
+                    <table class="coupon_content2">
+                        <tr class="c_content2_text">
+                            <td>使用說明:</td>
+                        </tr>
+                        <tr class="c_content2_text2">
+                            <td>此優惠券將在您未來的五次AI智慧喜消費中，增加獲得的炭點數0.03%。</td>
+                        </tr>
+                        <tr class="c_content2_text">
+                            <td>使用限制:</td>
+                        </tr>
+                        <tr class="c_content2_text2">
+                            <td>1.一次消費僅能使用一張優惠券2.單次碳點消費大於100點即可使用</td>
+                        </tr>
+                        <tr class="c_content2_text">
+                            <td>使用期限:</td>
+                        </tr>
+                        <tr class="c_content2_text2">
+                            <td>無使用期限</td>
+                        </tr>
+                    </table>
+                    <div align="center"><button class="coupon_button">確認兌換</button></div>
+                </div>
+                <div class="none"></div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="fo">
+                <a href="../index/"><img src="{% static 'img/home.png'%}" alt="home鍵" class="f"></a>
+                <a href="../member/"><img src="{% static 'img/member.png'%}" alt="member鍵" class="f"></a>
+                <a href="../ccmgt/"><img src="{% static 'img/creditcard.png'%}" alt="creditcard鍵" class="f"></a>
+                <a href="../shop/"><img src="{% static 'img/store.png'%}" alt="store鍵" class="f"></a>
+                <a href="../settings/"><img src="{% static 'img/setting.png'%}" alt="setting鍵" class="f"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

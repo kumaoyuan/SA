@@ -1,0 +1,39 @@
+main{
+    width: 100%;
+}
+.title{
+    width: 80%;
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 20px auto;
+    text-align: center;
+}
+.form{
+    width: 300px;
+    background-color: #cacaca;
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px;
+}
+.ccdtl{
+    font-size: 18px;
+    padding: 5px;
+    margin:10px auto;
+}
+#ccdtl1, #ccdtl5{
+    width: 280px;
+}
+#ccdtl2, #ccdtl3{
+    width: 50px; 
+}
+#ccdtl4{
+    width: 110px;
+}
+.bt{
+    font-size: 18px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    margin: 10px auto;
+}

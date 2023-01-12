@@ -1,0 +1,94 @@
+/**{  
+    outline: solid red 1px;
+}*/
+
+main{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.none {
+    height: 80px;
+}
+
+/*search*/
+.btimg{
+    width: 30px;
+}
+.m1img{
+    width: 25px;
+}
+
+/*進入智慧洗*/
+.good1{
+    width:100%;
+    position:relative;
+    margin:20px 0;
+}
+.wash{
+    width: 100%;
+}
+.good1_text{
+    position:absolute;
+    left:16%;
+    bottom:40%;
+    width:73%;
+}
+.good1_text_texts{
+    color:rgb(255, 255, 255);
+    background-color: #113916;
+    border:2px solid #113916;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    padding:2px;
+    border-radius: 10px;
+}
+
+/*優惠券title*/
+.coupon_text{
+    padding: 10px;
+    display: flex;
+    border-bottom: 1px #113916 solid;
+    padding-bottom: 5px;
+}
+.c_text_text{
+    color:#113916;
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 15px 0 0 15px;
+}
+.cpimg{
+    width: 60px;
+    height: 60px;
+}
+
+/*優惠券*/
+.coupon{
+    display: flex;
+    font-size: 20px;
+    color:white;
+    font-weight: bold;
+    background-color: #67774F;
+    border-radius: 10px;
+    margin:10px auto;
+    padding:10px;
+}
+.coupon_text2{
+    margin-left: 50px;
+}
+.coupon_text3{
+    margin-left: 10px;
+    font-size: 25px;
+}
+.coupon_pic{
+    height:20px;
+    width:20px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.coinimg{
+    height: 20px;
+    width: 20px;
+}

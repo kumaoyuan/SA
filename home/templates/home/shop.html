@@ -1,0 +1,742 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳志郎 | SHOP</title>
+    <style>
+        @import url('{% static "css/publicversion.css"%}');
+        @import url('{% static "css/shop.css"%}');
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="{% static 'js/shop.js'%}"></script>
+    <script src="{% static 'js/cal.js'%}"></script>
+</head>
+
+<body>
+    {% if messages %}
+        <script>
+            {%for msg in messages %}
+            alert('{{msg.message}}');
+            {% endfor %}
+        </script>
+    {% endif %}
+    <div class="bg">
+        <header>
+            <div class="ho">
+                <a href="../index/"><img src='{% static "img/logo.png"%}' alt="logo圖" class="logo"></a>
+                <a href="../noticenter/"><img src='{% static "img/alarm2.png"%}' alt="alarm鍵" class="alarm"></a>
+            </div>
+            <div class="splitline">
+        </header>
+        <div class="none2"></div>
+
+        <main>
+            <!--搜尋欄 & 點數餘額-->
+            <div class="search">
+                <div class="search_box">
+                    <input class="search_bar" type="text" name="search" placeholder="搜尋">
+                    <button class="search_btn"><img src='{% static "img/search.png"%}' class="btimg"></button>
+                </div>
+                <div class="m1_point">
+                    <h1 class="m1_text">{{point}}</h1>
+                    <div class="m1_pic">
+                        <img src="{% static 'img/coins.png'%}" class="m1img">
+                    </div>
+                </div>
+            </div>
+
+
+            <!--商店分類-->
+            <div class="storecf">
+                <span id="tab-1">食</span>
+                <span id="tab-2">衣</span>
+                <span id="tab-3">住</span>
+                <span id="tab-4">行</span>
+                <span id="tab-5">其他</span>
+                <span id="tab-6">合作商家</span>
+                <span id="tab-7">寵物兌換</span>
+
+
+                <!-- 頁籤按鈕 -->
+                <div id="tab">
+                    <ul>
+                        <li><a href="#tab-1">食</a></li>
+                        <li><a href="#tab-2">衣</a></li>
+                        <li><a href="#tab-3">住</a></li>
+                        <li><a href="#tab-4">行</a></li>
+                        <li><a href="#tab-5">其他</a></li>
+                        <li><a href="#tab-6">合作商家</a></li>
+                        <li><a href="#tab-7">寵物兌換</a></li>
+                    </ul>
+
+                    <!-- 頁籤的內容區塊 -->
+                    <!--食-->
+                    <div class="tab-content-1">
+                        <div class="shop">
+                            <!--食1-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/eat1.jpg'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" name="compassion" class="compassionbt" checked>
+                                    <div class="shop_text" id="s1">
+                                        <p class="shop_text_texts">牛肉</p>
+                                    </div>
+                                </div>
+                                <form action="../addconsume/" method="get">
+                                <div class="panel" id="p1">
+                                    <h4>-<h4 class="onlyPrice">20</h4>點 / 100公克</h4>
+                                    <br>
+                                    <input type="hidden" value="20" name="a">
+                                    <input type="hidden" value="食-牛肉" name="shopname">
+                                    <input type="button" class="decrease" value="-">
+                                    <input type="text" class="quantity" value="1"  name="pice"/>
+                                    <input type="button" class="increase" value="+">
+                                    <br><br>
+                                    <h3>TOTAL：<h3 class="onlySum">20</h3>
+                                    </h3>
+                                    <br>
+                                    <input type="submit" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+                            <!--食2-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/eat2.jpg'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s2">
+                                        <p class="shop_text_texts">雞肉</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p2">
+                                    <h4>-<h4 class="onlyPrice">15</h4>點 / 100公克</h4>
+                                    <br>
+                                    <input type="button" class="decrease" value="-">
+                                    <input type="text" class="quantity" value="1">
+                                    <input type="button" class="increase" value="+">
+                                    <br><br>
+                                    <h3>TOTAL：<h3 class="onlySum">15</h3>
+                                    </h3>
+                                    <br>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+                            <!--食3-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/eat3.jpg'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s3">
+                                        <p class="shop_text_texts">起司</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p3">
+                                    <h4>-<h4 class="onlyPrice">10</h4>點 / 100公克</h4>
+                                    <br>
+                                    <input type="button" class="decrease" value="-">
+                                    <input type="text" class="quantity" value="1">
+                                    <input type="button" class="increase" value="+">
+                                    <br><br>
+                                    <h3>TOTAL：<h3 class="onlySum">10</h3>
+                                    </h3>
+                                    <br>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+                            <!--食4-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/eat4.png'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s4">
+                                        <p class="shop_text_texts">蔬菜</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p4">
+                                    <h4>+<h4 class="onlyPrice">10</h4>點 / 100公克</h4>
+                                    <br>
+                                    <input type="button" class="decrease" value="-">
+                                    <input type="text" class="quantity" value="1">
+                                    <input type="button" class="increase" value="+">
+                                    <br><br>
+                                    <h3>TOTAL：<h3 class="onlySum">10</h3>
+                                    </h3>
+                                    <br>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--衣-->
+                    <div class="tab-content-2">
+                        <div class="shop">
+                            <!--衣1-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/cloth1.jpg'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s5">
+                                        <p class="shop_text_texts">合成纖維</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p5">
+                                    <h4>-<h4 class="onlyPrice">30</h4>點 / 件</h4>
+                                    <br>
+                                    <input type="button" class="decrease" value="-">
+                                    <input type="text" class="quantity" value="1">
+                                    <input type="button" class="increase" value="+">
+                                    <br><br>
+                                    <h3>TOTAL：<h3 class="onlySum">30</h3>
+                                    </h3>
+                                    <br>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+                            <!--衣2-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/cloth2.jpg'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s6">
+                                        <p class="shop_text_texts">棉花</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p6">
+                                    <h4>-<h4 class="onlyPrice">20</h4>點 / 件</h4>
+                                    <br>
+                                    <input type="button" class="decrease" value="-">
+                                    <input type="text" class="quantity" value="1">
+                                    <input type="button" class="increase" value="+">
+                                    <br><br>
+                                    <h3>TOTAL：<h3 class="onlySum">20</h3>
+                                    </h3>
+                                    <br>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+                            <!--衣3-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/cloth3.jpg'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s7">
+                                        <p class="shop_text_texts">動物毛</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p7">
+                                    <h4>-<h4 class="onlyPrice">15</h4>點 / 件</h4>
+                                    <br>
+                                    <input type="button" class="decrease" value="-">
+                                    <input type="text" class="quantity" value="1">
+                                    <input type="button" class="increase" value="+">
+                                    <br><br>
+                                    <h3>TOTAL：<h3 class="onlySum">15</h3>
+                                    </h3>
+                                    <br>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+                            <!--衣4-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/cloth4.jpg'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s8">
+                                        <p class="shop_text_texts">皮革</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p8">
+                                    <h4>-<h4 class="onlyPrice">15</h4>點 / 件</h4>
+                                    <br>
+                                    <input type="button" class="decrease" value="-">
+                                    <input type="text" class="quantity" value="1">
+                                    <input type="button" class="increase" value="+">
+                                    <br><br>
+                                    <h3>TOTAL：<h3 class="onlySum">15</h3>
+                                    </h3>
+                                    <br>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+                            <!--衣5-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/cloth5.jpg'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s9">
+                                        <p class="shop_text_texts">二手、再生</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p9">
+                                    <h4>+<h4 class="onlyPrice">10</h4>點 / 件</h4>
+                                    <br>
+                                    <input type="button" class="decrease" value="-">
+                                    <input type="text" class="quantity" value="1">
+                                    <input type="button" class="increase" value="+">
+                                    <br><br>
+                                    <h3>TOTAL：<h3 class="onlySum">10</h3>
+                                    </h3>
+                                    <br>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--住-->
+                    <div class="tab-content-3">
+                        <div class="shop">
+                            <!--住1-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/use1.jpg'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s10">
+                                        <p class="shop_text_texts">冷氣</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p10">
+                                    <h4>-<h4 class="onlyPrice">30</h4>點 / 小時</h4>
+                                    <br>
+                                    <input type="button" class="decrease" value="-">
+                                    <input type="text" class="quantity" value="1">
+                                    <input type="button" class="increase" value="+">
+                                    <br><br>
+                                    <h3>TOTAL：<h3 class="onlySum">30</h3>
+                                    </h3>
+                                    <br>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+                            <!--住2-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/use2.jpg'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s11">
+                                        <p class="shop_text_texts">暖氣</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p11">
+                                    <h4>-<h4 class="onlyPrice">30</h4>點 / 小時</h4>
+                                    <br>
+                                    <input type="button" class="decrease" value="-">
+                                    <input type="text" class="quantity" value="1">
+                                    <input type="button" class="increase" value="+">
+                                    <br><br>
+                                    <h3>TOTAL：<h3 class="onlySum">30</h3>
+                                    </h3>
+                                    <br>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+                            <!--住3-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/use3.jpg'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s12">
+                                        <p class="shop_text_texts">熱水器</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p12">
+                                    <h4>-<h4 class="onlyPrice">20</h4>點 / 小時</h4>
+                                    <br>
+                                    <input type="button" class="decrease" value="-">
+                                    <input type="text" class="quantity" value="1">
+                                    <input type="button" class="increase" value="+">
+                                    <br><br>
+                                    <h3>TOTAL：<h3 class="onlySum">20</h3>
+                                    </h3>
+                                    <br>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+                            <!--住4-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/use4.jpg'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s13">
+                                        <p class="shop_text_texts">電腦</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p13">
+                                    <h4>-<h4 class="onlyPrice">15</h4>點 / 小時</h4>
+                                    <br>
+                                    <input type="button" class="decrease" value="-">
+                                    <input type="text" class="quantity" value="1">
+                                    <input type="button" class="increase" value="+">
+                                    <br><br>
+                                    <h3>TOTAL：<h3 class="onlySum">15</h3>
+                                    </h3>
+                                    <br>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--行-->
+                    <div class="tab-content-4">
+                        <div class="shop">
+                            <!--行1-->
+                            <a href="">
+                                <form action="../mystoreaddcar/" method="GET" id="form1">
+                                <div class="s-of">
+                                    <div class="shop1">
+                                        <input type="checkbox" class="compassionbt" value="汽車" id="car" onchange="return calc()">
+                                        <a href="../garage/"><img src="{% static 'img/go1.jpg'%}"
+                                                style="height:100%;width:100%"></a>
+                                        <div class="shop_text" id="s14">
+                                            <p class="shop_text_texts">汽車</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </form>
+                            </a>
+
+                            <!--行2-->
+                            <a href="">
+                                <div class="s-of">
+                                    <div class="shop1">
+                                        <img src="{% static 'img/go2.jpg'%}" style="height:100%;width:100%">
+                                        <input type="checkbox" class="compassionbt">
+                                        <div class="shop_text" id="s15">
+                                            <p class="shop_text_texts">摩托車</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!--行3-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/go3.jpg'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s16">
+                                        <p class="shop_text_texts">大眾運輸</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p16">
+                                    <h4>+<h4 class="onlyPrice">10</h4>點 / 小時</h4>
+                                    <br>
+                                    <input type="button" class="decrease" value="-">
+                                    <input type="text" class="quantity" value="1">
+                                    <input type="button" class="increase" value="+">
+                                    <br><br>
+                                    <h3>TOTAL：<h3 class="onlySum">10</h3>
+                                    </h3>
+                                    <br>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+                            <!--行4-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/go4.jpg'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s17">
+                                        <p class="shop_text_texts">腳踏車</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p17">
+                                    <h4>+<h4 class="onlyPrice">10</h4>點 / 小時</h4>
+                                    <br>
+                                    <input type="button" class="decrease" value="-">
+                                    <input type="text" class="quantity" value="1">
+                                    <input type="button" class="increase" value="+">
+                                    <br><br>
+                                    <h3>TOTAL：<h3 class="onlySum">10</h3>
+                                    </h3>
+                                    <br>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--其他-->
+                    <div class="tab-content-5">
+                        <div class="shop">
+                            <!--其他1-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/else2.jpg'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s18">
+                                        <p class="shop_text_texts">環保餐具</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p18">
+                                    <h4>+<h4 class="onlyPrice">5</h4>點 / 次</h4>
+                                    <br>
+                                    <input type="button" class="decrease" value="-">
+                                    <input type="text" class="quantity" value="1">
+                                    <input type="button" class="increase" value="+">
+                                    <br><br>
+                                    <h3>TOTAL：<h3 class="onlySum">5</h3>
+                                    </h3>
+                                    <br>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+                            <!--其他2-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/else3.jpg'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s19">
+                                        <p class="shop_text_texts">購物袋</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p19">
+                                    <h4>+<h4 class="onlyPrice">5</h4>點 / 次</h4>
+                                    <br>
+                                    <input type="button" class="decrease" value="-">
+                                    <input type="text" class="quantity" value="1">
+                                    <input type="button" class="increase" value="+">
+                                    <br><br>
+                                    <h3>TOTAL：<h3 class="onlySum">5</h3>
+                                    </h3>
+                                    <br>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+                            <!--其他3-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/else4.jpg'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s20">
+                                        <p class="shop_text_texts">環保杯</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p20">
+                                    <h4>+<h4 class="onlyPrice">5</h4>點 / 次</h4>
+                                    <br>
+                                    <input type="button" class="decrease" value="-">
+                                    <input type="text" class="quantity" value="1">
+                                    <input type="button" class="increase" value="+">
+                                    <br><br>
+                                    <h3>TOTAL：<h3 class="onlySum">5</h3>
+                                    </h3>
+                                    <br>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--合作商家-->
+                    <div class="tab-content-6">
+                        <div class="shop">
+                            <!--商店1-->
+                            <a href="../good1/">
+                                <div class="s-of">
+                                    <div class="shop1">
+                                        <img src="{% static 'img/wash.jpg'%}" style="height:100%;width:100%">
+                                        <input type="checkbox" class="compassionbt">
+                                        <div class="shop_text">
+                                            <p class="shop_text_texts">AI智慧洗</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!--商店2-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/bike.jpg'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text">
+                                        <p class="shop_text_texts">Z-bike</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--寵物兌換-->
+                    <div class="tab-content-7">
+                        <div class="shop">
+                            <!--寵物1-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/cat1.png'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s21">
+                                        <p class="shop_text_texts">喵嗚</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p21">
+                                    <h4>-500點 / 隻</h4>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+                            <!--寵物2-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/dog1.png'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s22">
+                                        <p class="shop_text_texts">你是真狗</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p22">
+                                    <h4>-500點 / 隻</h4>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+                            <!--寵物3-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/chicken1.png '%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s23">
+                                        <p class="shop_text_texts">GGininder</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p23">
+                                    <h4>-500點 / 隻</h4>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+                            <!--寵物4-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/pet1.png'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s24">
+                                        <p class="shop_text_texts">鴨霸</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p24">
+                                    <h4>-500點 / 隻</h4>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+
+                            <!--寵物5-->
+                            <div class="s-of">
+                                <div class="shop1">
+                                    <img src="{% static 'img/penguin1.png'%}" style="height:100%;width:100%">
+                                    <input type="checkbox" class="compassionbt">
+                                    <div class="shop_text" id="s25">
+                                        <p class="shop_text_texts">72</p>
+                                    </div>
+                                </div>
+                                <div class="panel" id="p25">
+                                    <h4>-500點 / 隻</h4>
+                                    <input type="button" value="兌換" class="bt">
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="none"></div>
+        </main>
+
+        <!--加減js-->
+        <script>
+            window.onload = function () {
+
+                var increment = document.getElementsByClassName("increase");
+                for (var i = 0; i < increment.length; i++) {
+                    increment[i].index = i;
+
+                    increment[i].onclick = function () {
+                        var flag = this.index;
+                        var q = document.getElementsByClassName("quantity")[flag];
+
+                        var newvalue = parseInt(q.value) + 1;
+
+                        q.setAttribute('value', newvalue);
+
+                        changeSum(flag, newvalue);
+                    }
+                }
+
+
+                var decrement = document.getElementsByClassName('decrease');
+                for (var j = 0; j < decrement.length; j++) {
+                    decrement[j].index = j;
+
+                    decrement[j].onclick = function () {
+                        var flag = this.index;
+                        var q = document.getElementsByClassName("quantity")[flag];
+
+                        if (parseInt(q.value) > 1) {
+                            var newvalue = parseInt(q.value) - 1;
+
+                            q.setAttribute('value', newvalue);
+
+                            changeSum(flag, newvalue);
+                        }
+                    }
+                }
+
+
+                function changeSum(flag, num) {
+
+                    var temp = document.getElementsByClassName("onlyPrice")[flag];
+                    var unitPrice = temp.innerHTML;
+                    var newPrice = parseInt(unitPrice) * num;
+                    var sum = document.getElementsByClassName("onlySum")[flag];
+
+                    sum.innerHTML = newPrice;
+                }
+                function calc()
+                    {
+                    if (document.getElementById('car').checked) 
+                    {
+                        document.getElementById('form1').submit();
+                    } 
+                    }
+            }
+
+        </script>
+
+
+    </div>
+
+
+    <footer>
+        <div class="fo">
+            <a href="../index/"><img src="{% static 'img/home.png'%}" alt="home鍵" class="f"></a>
+            <a href="../member/"><img src="{% static 'img/member.png'%}" alt="member鍵" class="f"></a>
+            <a href="../ccmgt/"><img src="{% static 'img/creditcard.png'%}" alt="creditcard鍵" class="f"></a>
+            <a href="../shop/"><img src="{% static 'img/store.png'%}" alt="store鍵" class="f"></a>
+            <a href="../settings/"><img src="{% static 'img/setting.png'%}" alt="setting鍵" class="f"></a>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>

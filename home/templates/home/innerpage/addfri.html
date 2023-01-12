@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳志郎 | YOUR FRIENDS</title>
+    <style>
+        @import url('{% static "css/publicversion.css"%}');
+        @import url("{% static 'css/addfri.css'%}");
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <header>
+            <div class="ho">
+                <a href="../index/"><img src="{% static 'img/logo.png'%}" alt="logo圖" class="logo"></a>
+                <a href="../noticenter/"><img src="{% static 'img/alarm2.png'%}" alt="alarm鍵" class="alarm"></a>
+            </div>
+            <div class="splitline"></div>
+        </header>
+        <div class="none2"></div>
+        <main>
+            
+            <!--個人qr扣-->
+            <div class="perqr">
+                <br>
+                <div class="perqrc"></div>
+                <div class="pername">薛安安</div>
+            </div>
+            <!--電話加友-->
+            <form action="../addfri1/" method="GET">
+            <div class="add">
+                <label class="atext">透過電話號碼加好友</label>
+                <br><input type="tel" class="telinput" name="tel">
+                <br><input type="submit" value="確認" class="telbt">
+            </div>
+            </form>
+        </main>
+
+        <footer>
+            <div class="fo">
+                <a href="../index/"><img src="{% static 'img/home.png'%}" alt="home鍵" class="f"></a>
+                <a href="../member/"><img src="{% static 'img/member.png'%}" alt="member鍵" class="f"></a>
+                <a href="../ccmgt/"><img src="{% static 'img/creditcard.png'%}" alt="creditcard鍵" class="f"></a>
+                <a href="../shop/"><img src="{% static 'img/store.png'%}" alt="store鍵" class="f"></a>
+                <a href="../settings/"><img src="{% static 'img/setting.png'%}" alt="setting鍵" class="f"></a>
+            </div>
+        </footer>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+/**{  
+    outline: solid red 1px;
+}*/
+
+main{
+    width:100%;
+}
+.pet_text{
+    margin:20px 120px 0 120px;
+    padding: 5px 5px 5px 15px;
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 30px;
+    border:1px solid black;
+    background-color: #A2B59F;
+    font-weight: bolder;
+}
+.garage_text{
+    margin:20px 50px 0 50px;
+    padding: 5px 5px 5px 15px;
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 30px;
+    border:1px solid black;
+    background-color: rgba(117, 147, 192, 0.824);
+    font-weight: bolder
+}
+.garage_text1{
+    font-weight: bold;
+    font-size: 28px;
+    margin-top:20px;
+    margin-left: 10px;
+    color:black;
+    letter-spacing: 5px;
+}
+.garage1{
+    border:dashed 2px rgba(50, 50, 50, 0.614);
+    width:42%;
+    height:150px;
+    margin:3% 3%;
+    position:relative;
+    z-index: 1;
+}
+.garage_text_texts{
+    color:rgb(255, 255, 255);
+    background-color: #6e848fb9;
+    border:2px solid white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bolder;
+    padding:2px;
+}
+.addcar_btn{
+    margin:auto;
+    font-size: 20px;
+    width: 120px;
+    border-radius: 10px;
+    padding: 5px 5px;
+    margin:20px 50px 0 120px;
+    text-align: center;
+}
+.none{
+    height: 80px;
+}

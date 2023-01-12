@@ -1,0 +1,15 @@
+.of{
+  width: 70%;
+  height: 30px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.title{
+  font-size: 18px;
+  font-weight: bolder;
+}
+/*鈴聲*/
+.ring, .version{
+  line-height: 30px;
+}

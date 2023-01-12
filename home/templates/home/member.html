@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳志郎 | MEMBER</title>
+    <style>
+        @import url('{% static "css/publicversion.css"%}');
+        @import url('{% static "css/member.css"%}');
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <header>
+            <div class="ho">
+                <a href="../index/"><img src='{% static "img/logo.png"%}' alt="logo圖" class="logo"></a>
+                <a href="../noticenter/"><img src='{% static "img/alarm2.png"%}' alt="alarm鍵" class="alarm"></a>
+            </div>
+            <div class="splitline"></div>
+        </header>
+        <div class="none2"></div>
+        <div class="perbg">
+            <!--基本資訊-->
+            <main>
+                <div class="perout">
+                    <div class="profilepic"></div>
+                    <div class="perinfo">
+                        <label class="pername">{{name}}</label>
+                        <br><label class="friendsnum">FRIENDS {{n}}</label>
+                    </div>
+                    <a href="../mypet/"><div class="petpic"></div></a>
+                </div>
+                <div class="splitline2"></div>
+            </main>
+
+            <!--頁面-->
+            <section>
+                <div class="sout">
+                    <a href="../pointrecord/"><div class="mf">點數紀錄</div></a>
+                    <br>
+                    <a href="../mypet/"><div class="mf">我的寵物</div></a>
+                    <br>
+                    <a href="../mycoupon/"><div class="mf">優惠券</div></a>
+                    <br>
+                    <a href="../leaderboard/"><div class="mf">排行榜</div></a>
+                    <br>
+                    <a href="../mystore/"><div class="mf">我的最愛</div></a>
+                    <br>
+                    <a href="../myfriends/"><div class="mf">我的好友</div></a>
+                    <br>
+                    <a href="../modifymem/"><div class="mf">會員資料修改</div></a>
+                    {% if log %}
+                    <br>
+                    <a href="../logout/"><div class="mf">登出</div></a>
+                    {%endif%}
+                </div>
+            </section>
+        <div class="none"></div>
+        </div>
+        <footer>
+            <div class="fo">
+                <a href="../index/"><img src='{% static "img/home.png"%}' alt="home鍵" class="f"></a>
+                <a href="../member/"><img src='{% static "img/member.png"%}' alt="member鍵" class="f"></a>
+                <a href="../ccmgt/"><img src='{% static "img/creditcard.png"%}' alt="creditcard鍵" class="f"></a>
+                <a href="../shop/"><img src='{% static "img/store.png"%}' alt="store鍵" class="f"></a>
+                <a href="../settings/"><img src='{% static "img/setting.png"%}' alt="setting鍵" class="f"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

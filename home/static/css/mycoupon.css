@@ -1,0 +1,12 @@
+main{
+    width: 100%;
+}
+.title{
+    font-size: 30px;
+    font-weight: bolder;
+    border-bottom: solid 3px #113916;
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+    color: #113916;
+}

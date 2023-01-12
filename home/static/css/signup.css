@@ -1,0 +1,82 @@
+/**{  
+    outline: solid red 1px;
+}*/
+
+main{
+    width: 100%;
+    margin-top: 15px;
+}
+.stitle{
+    text-align: center;
+    font-size: 45px;
+    padding: 15px;
+    color: #263c34;
+}
+.sbg{
+    height: 540px;
+    width: 300px;
+    background-color: #cacaca;
+    border-radius: 10px;
+    margin: auto;
+}
+.sdiv{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sint{
+    font-size: 15px;
+}
+.sip{
+    font-size: 15px;
+    border: solid gray 1px;
+}
+#ipmin{
+    width: 150px;
+}
+#ipmax{
+    width: 245px;
+}
+.sbt{
+    width: 100px;
+    height: 30px;
+    margin: 20px auto;
+    font-size: 15px;
+    border-radius: 5px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sintd{
+    float: left;
+    width: 35%;
+    line-height: 39px;
+    padding: 10px 0;
+}
+.sipd{
+    float: right;
+    width: 60%;
+    line-height: 39.8px;
+    padding: 10px 0;
+}
+.alignright{
+    text-align: right;
+}
+.o {
+    width: 84%;
+    margin: 10px auto;
+}
+
+.chinfo{
+    text-align: left;
+    width: 38%;
+    margin: 10px auto 20px;
+    font-size: 10px;
+}
+
+.none{
+    height: 80px;
+}

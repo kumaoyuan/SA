@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳志郎 | SIGNUP</title>
+    <style>
+        @import url('{% static "css/publicversion.css"%}');
+        @import url('{% static "css/signup.css"%}');
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <header>
+            <div class="ho">
+                <a href="../index/"><img src='{% static "img/logo.png"%}' alt="logo圖" class="logo"></a>
+                <a href="../noticenter/"><img src='{% static "img/alarm2.png"%}' alt="alarm鍵" class="alarm"></a>
+            </div>
+            <div class="splitline">
+        </header>
+        <div class="none2"></div>
+        <main>
+            <h2 class="stitle">SIGN UP</h2>
+            <form action="../signup1/" method="GET" >
+            <div class="sbg">
+                <div class="sdiv">
+                    <div class="sintd">
+                        <div class="alignright">
+                            <label class="sint">NAME</label><br>
+                            <label class="sint">ACCOUNT</label><br>
+                            <label class="sint">PASSWORD</label><br>
+                        </div>
+                    </div>
+                    <div class="sipd">
+                        <input type="text" class="sip" id="ipmin" name="memberName" max="5">
+                        <input type="text" class="sip" id="ipmin" name="memberAc" min="6">
+                        <input type="password" class="sip" id="ipmin" name="memberPw" min="6">
+                    </div>
+
+                    <div class="o">
+                        <p><label class="sint">CONFIRM PASSWORD</label>
+                            <br><input type="password" class="sip" id="ipmax" name="confirmPw">
+                        </p>
+                        <br>
+                        <p><label class="sint">PHONE NUMBER</label>
+                            <br><input type="tel" class="sip" id="ipmax" name="memberphone">
+                        </p>
+                        <br>
+                        <p><label class="sint">E-MAIL</label>
+                            <br><input type="email" class="sip" id="ipmax" name="memberEmail">
+                        </p>
+                        <br>
+                        <p><label class="sint">ADDRESS</label>
+                            <br><input type="text" class="sip" id="ipmax" name="memberAddress">
+                        </p>
+                    </div>
+                    <br>
+                    <div class="chinfo">
+                        <input type="checkbox" class="sbch" required><label><a href="../perconsent/" target="_blank">個資同意書</a></label>
+                        <br>
+                        <input type="checkbox" class="sbch"><label>是否接收優惠訊息</label>
+                    </div>
+                    <p><input type="submit" value="SIGN UP" class="sbt" name="button" id="submit" onclick="validate()"></p>
+                </div>
+            </div>
+            </form>
+            <div class="none">
+        </main>
+
+        <footer>
+            <div class="fo">
+                <a href="../index/"><img src='{% static "img/home.png"%}' alt="home鍵" class="f"></a>
+                <a href="../member/"><img src='{% static "img/member.png"%}' alt="member鍵" class="f"></a>
+                <a href="../ccmgt/"><img src='{% static "img/creditcard.png"%}' alt="creditcard鍵" class="f"></a>
+                <a href="../shop/"><img src='{% static "img/store.png"%}' alt="store鍵" class="f"></a>
+                <a href="../settings/"><img src='{% static "img/setting.png"%}' alt="setting鍵" class="f"></a>
+            </div>
+        </footer>
+        </div>
+        <script>
+        function validate() {
+
+            var pw1 = document.getElementsByName("memberPw").value;
+            
+            var pw2 = document.getElementsByName("confirPw").value;
+            
+            if(pw1 == pw2) {
+            
+            document.getElementById("submit").disabled = false;
+            
+            }
+            
+            else {
+            
+            alert("確認密碼不符");
+            document.getElementById("submit").disabled = true;
+            
+            location.reload();
+            
+            }
+            
+            }
+        </script>
+</body>
+
+</html>

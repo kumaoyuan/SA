@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳志郎 | AI智慧喜</title>
+    <style>
+        @import url('{% static "css/publicversion.css"%}');
+        @import url('{% static "css/shop.css"%}');
+        @import url('{% static "css/good1.css"%}');
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <header>
+            <div class="ho">
+                <a href="../index/"><img src="{% static 'img/logo.png'%}" alt="logo圖" class="logo"></a>
+                <a href="../noticenter/"><img src="{% static 'img/alarm2.png'%}" alt="alarm鍵" class="alarm"></a>
+            </div>
+            <div class="splitline"></div>
+        </header>
+        <div class="none2"></div>
+        <main>
+            <div class="main">
+            <!--上面欄-->
+            <div class="search">
+                    <div class="search_box">
+                        <input class="search_bar" type="text" name="search" placeholder="搜尋">
+                        <button class="search_btn"><img src="{% static 'img/search.png'%}" class="btimg"></button>
+                    </div>
+                    <div class="m1_point">
+                        <h1 class="m1_text">334</h1>
+                        <div class="m1_pic">
+                            <img src="{% static 'img/coins.png'%}" class="m1img">
+                        </div>      
+                    </div>
+                </div>
+
+                <!--進入智慧洗-->
+                <div class="good1">
+                    <img src="{% static 'img/wash.jpg'%}" class="wash">
+                    <input type="button" value="♡" id="m3_s1_button">
+                    <div class="good1_text">
+                        <a href="../authorized/"><p class="good1_text_texts">點擊進入AI智慧喜</p></a>
+                    </div>
+                </div>
+
+                <!--優惠券title-->
+                <div class="coupon_text">
+                    <img src="{% static 'img/coupon.png'%}" class="cpimg">
+                    <p class="c_text_text">優惠券</p>
+                </div>
+
+                <!--優惠券-->
+                <button class="coupon">
+                    <text class="coupon_text1">碳點加乘券(+0.5%)</text>
+                    <text class="coupon_text2">|</text>
+                    <text class="coupon_text3">100</text>
+                    <div class="coupon_pic">
+                        <img src="{% static 'img/coins.png'%}" class="coinimg">
+                    </div>
+                </button>
+                <button class="coupon">
+                    <text class="coupon_text1">碳點加乘券(+5.5%)</text>
+                    <text class="coupon_text2">|</text>
+                    <text class="coupon_text3">150</text>
+                    <div class="coupon_pic">
+                        <img src="{% static 'img/coins.png'%}" class="coinimg">
+                    </div>
+                </button>
+                <button class="coupon">
+                    <text class="coupon_text1">碳點加乘券(+10%)</text>
+                    <text class="coupon_text2">|</text>
+                    <text class="coupon_text3">200</text>
+                    <div class="coupon_pic">
+                        <img src="{% static 'img/coins.png'%}" class="coinimg">
+                    </div>
+                </button>
+                <button class="coupon">
+                    <text class="coupon_text1">碳點加乘券(+13%)</text>
+                    <text class="coupon_text2">|</text>
+                    <text class="coupon_text3">250</text>
+                    <div class="coupon_pic">
+                        <img src="{% static 'img/coins.png'%}" class="coinimg">
+                    </div>
+                </button>
+                <button class="coupon">
+                    <text class="coupon_text1">碳點加乘券(+15%)</text>
+                    <text class="coupon_text2">|</text>
+                    <text class="coupon_text3">300</text>
+                    <div class="coupon_pic">
+                        <img src="{% static 'img/coins.png'%}" class="coinimg">
+                    </div>
+                </button>
+                <button class="coupon">
+                    <text class="coupon_text1">碳點加乘券(+18%)</text>
+                    <text class="coupon_text2">|</text>
+                    <text class="coupon_text3">350</text>
+                    <div class="coupon_pic">
+                        <img src="{% static 'img/coins.png'%}" class="coinimg">
+                    </div>
+                </button>
+                <div class="none"></div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="fo">
+                <a href="../index/"><img src="{% static 'img/home.png'%}" alt="home鍵" class="f"></a>
+                <a href="../member/"><img src="{% static 'img/member.png'%}" alt="member鍵" class="f"></a>
+                <a href="../ccmgt/"><img src="{% static 'img/creditcard.png'%}" alt="creditcard鍵" class="f"></a>
+                <a href="../shop/"><img src="{% static 'img/store.png'%}" alt="store鍵" class="f"></a>
+                <a href="../settings/"><img src="{% static 'img/setting.png'%}" alt="setting鍵" class="f"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+/**{  
+    outline: solid red 1px;
+}*/
+
+.perbg{
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/perbg2.jpg');
+    background-size: cover;
+    padding-top: 10px;
+}
+.none{
+    height: 80px;
+}
+/*基本資訊*/
+main{
+    width: 100%;
+}
+.perout{
+    margin: 15px auto;
+    display: table;
+}
+.profilepic{
+    border-radius: 50%;
+    width: 100px;
+    background-image: url('../img/profilepic.jpg');
+    background-size: cover;
+    display: table-cell;
+    vertical-align: middle;
+}
+.perinfo{
+    width: 150px;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10px;
+}
+.petpic{
+    height: 100px;
+    width: 100px;
+    display: table-cell;
+    vertical-align: middle;
+    background-image: url('../img/pet1.png');
+    background-size: cover;
+}
+.pername{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.friendsnum{
+    font-size: 15px;
+    line-height: 30px;
+}
+.spiltline2{
+    border-top: solid #cccccc;
+    width: 90%;
+    height: 1px;
+    margin: auto;
+}
+
+/*頁面*/
+section{
+    width: 100%;
+}
+.sout{
+    width: 320px;
+    margin: 30px auto;
+    line-height: 20px;
+}
+.mf{
+    background-color: #cacaca;
+    border-radius: 10px;
+    height: 50px;
+    width: 320px;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+}

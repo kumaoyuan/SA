@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment password</title>
+    <style>
+        @import url('{% static "css/publicversion.css"%}');
+        @import url('{% static "css/payment.css"%}');
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <header>
+            <div class="ho">
+                <a href="../index/"><img src="{% static 'img/logo.png'%}" alt="logo圖" class="logo"></a>
+                <a href="../noticenter/"><img src="{% static 'img/alarm2.png'%}" alt="alarm鍵" class="alarm"></a>
+            </div>
+            <div class="splitline"></div>
+        </header>
+        <div class="none2"></div>
+        <!--信用卡-->
+        <section>
+            <a href="../ccmgt/">
+                <div class="creditbar">
+                    <label class="cname">玉山銀行</label>
+                    <label class="cnum">**** **** **** 1234</label>
+                    <img src="{% static 'img/arrow.png'%}" class="arrow">
+                </div>
+                <label class="ctext">新增/修改</label>
+            </a>
+        </section>
+
+        <!--QR扣、付款QR-->
+        <section>
+            <div class="qrcode"></div>
+            <div class="update">4:59　更新QR Code　<img src="{% static 'img/update2.png'%}" class="udpic"></div>
+        </section>
+
+        <!--bar扣、載具-->
+        <section>
+            <div class="barcode"></div>
+            <div class="bctext">
+                手機載具&ensp;
+                <label class="barnum">/O.D6M2S</label>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="fo">
+                <a href="../index/"><img src="{% static 'img/home.png'%}" alt="home鍵" class="f"></a>
+                <a href="../member/"><img src="{% static 'img/member.png'%}" alt="member鍵" class="f"></a>
+                <a href="../ccmgt/"><img src="{% static 'img/creditcard.png'%}" alt="creditcard鍵" class="f"></a>
+                <a href="../shop/"><img src="{% static 'img/store.png'%}" alt="store鍵" class="f"></a>
+                <a href="../settings/"><img src="{% static 'img/setting.png'%}" alt="setting鍵" class="f"></a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

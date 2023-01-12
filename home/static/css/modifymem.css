@@ -1,0 +1,31 @@
+main{
+    width: 100%;
+}
+.title{
+    font-size: 25px;
+    margin: 10px auto; 
+    width: 200px;
+    text-align: center;
+    font-weight: bolder;
+}
+form{
+    width: 310px;
+    margin: 30px auto;    
+    font-size: 18px;
+}
+.ipt{
+    width: 250px;
+    font-size: 18px;
+}
+.bt{
+    width: 50px;
+    font-size: 16px;
+    margin: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.none{
+    height: 80px;
+}

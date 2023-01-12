@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳志郎 | INDEX</title>
+    <style>
+        @import url('{% static "css/publicversion.css"%}');
+        @import url('{% static "css/index.css"%}');
+    </style>
+
+</head>
+
+<body>
+    <div class="bg">
+        <header>
+            <div class="ho">
+                <a href="../index/"><img src='{% static "img/logo.png"%}' alt="logo圖" class="logo"></a>
+                <a href="../noticenter/"><img src='{% static "img/alarm2.png"%}' alt="alarm鍵" class="alarm"></a>
+            </div>
+            <div class="splitline"></div>
+        </header>
+        <div class="none2"></div>
+       
+        {% if messages %}
+        <script>
+            {%for msg in messages %}
+            alert('{{msg.message}}');
+            {% endfor %}
+        </script>
+        {% endif %}
+        <main>
+            <!--動態廣告-->
+            <!--<div class="ad">
+                <div class="adicon-of">
+                    <img src='{% static "img/lastpage.png"%}' class="adicon" id="minus" onclick="minus()">
+                    <img src='{% static "img/nextpage.png"%}' class="adicon" id="add" onclick="add()">
+                </div>
+                <img src='{% static "img/ad1.jpg"%}' class="adimg">
+            </div>-->
+            <div class="slider_container">
+                <div>
+                    <img src="{% static 'img/ad1.jpg'%}" style="height:200px;width:350px" alt="pure css3 slider" />
+                </div>
+                <div>
+                    <img src="{% static 'img/ad2.png'%}" style="height:200px;width:350px" alt="pure css3 slider" />
+                </div>
+                <div>
+                    <img src="{% static 'img/ad3.jpg'%}" style="height:200px;width:350px" alt="pure css3 slider" />
+                </div>
+                <div>
+                    <img src="{% static 'img/ad4.jpg'%}" style="height:200px;width:350px" alt="pure css3 slider" />
+                </div>
+            </div>
+
+            <!--每日簽到-->
+            <div class="checkup">
+                <div class="ckup-icon"><img src='{% static "img/ckup-icon2.png"%}' class="ckupicon-img"></div>
+                <div class="ckup-left">
+                    <h2>天天來簽到</h2>
+                    天天5點 享優惠
+                </div>
+                <div class="ckup-right">
+                    {%if check%}
+                        <input type="radio" class="ckup-bt" checked/>
+                    {%else%}
+                        <input type="radio" class="ckup-bt"onclick="if (this.checked){window.location='../check/'}" />
+                    {%endif%}
+                    <br>
+                    <h4 class="bttext">點擊簽到</h4>
+                </div>
+            </div>
+
+            <!--寵物、碳點、碳排-->
+            <div class="personal">
+                <table class="per-tbl">
+                    <tr>
+                        <td rowspan="2"><a href="../mypet/"><div class="per-pet"></div></a></td>
+                        <td class="per-td">
+                        <a href="../pointrecord/">
+                            <h4>碳點總數</h4>
+                            <h2>{{point}}</h2>
+                        </a>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="per-td">
+                            <h4>當月碳排量</h4>
+                            <h2>1426</h2>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!--熱門商店-->
+            <div class="popularstore">
+                <h2 class="pplst-title">/熱門選擇/</h2>
+                <div class="pplst-line"></div>
+
+                <div class="m3_store">
+                    <div class="m3_s1_pic">
+                        <a href="../good1/"><img src='{% static "img/wash.jpg"%}' style="height:100%;width:100%"></a>
+                        <input type="checkbox" name="compassion" class="compassionbt">
+                    </div>
+                    <div class="m3_s1_text">
+                        <h3>AI智慧喜</h3>
+                        <div class="m1_s1_t1_star">
+                            4.8
+                        </div>
+                        <div class="m1_s1_t1_time">
+                            open 24hr
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m3_store">
+                    <div class="m3_s1_pic">
+                        <img src='{% static "img/bike.jpg"%}' style="height:100%;width:100%">
+                        <input type="checkbox" name="compassion" class="compassionbt">
+                    </div>
+                    <div class="m3_s1_text">
+                        <h3>Z-BIKE</h3>
+                        <div class="m1_s1_t1_star">
+                            4.5
+                        </div>
+                        <div class="m1_s1_t1_time">
+                            open 24hr
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m3_store">
+                    <div class="m3_s1_pic">
+                        <img src='{% static "img/eat4.png"%}' style="height:100%;width:100%">
+                        <input type="checkbox" name="compassion" class="compassionbt">
+                    </div>
+                    <div class="m3_s1_text">
+                        <h3>蔬菜水果</h3>
+                        <div class="m1_s1_t1_star">
+                            +10碳點
+                        </div>
+                        <div class="m1_s1_t1_time">
+                            <!--08:00~15:00-->
+                        </div>
+                    </div>
+            </div>
+
+            <div class="none"></div>
+        </main>
+
+        <footer>
+            <div class="fo">
+                <a href="../index/"><img src='{% static "img/home.png"%}' alt="home鍵" class="f"></a>
+                <a href="../member/"><img src='{% static "img/member.png"%}' alt="member鍵" class="f"></a>
+                <a href="../ccmgt/"><img src='{% static "img/creditcard.png"%}' alt="creditcard鍵" class="f"></a>
+                <a href="../shop/"><img src='{% static "img/store.png"%}' alt="store鍵" class="f"></a>
+                <a href="../settings/"><img src='{% static "img/setting.png"%}' alt="setting鍵" class="f"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

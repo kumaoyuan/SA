@@ -1,0 +1,50 @@
+main{
+    width: 100%;
+}
+
+.title{
+    font-size: 30px;
+    font-weight: bolder;
+    border-bottom: solid 3px #113916;
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+    color: #113916;
+}
+
+.pet{
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.ppic{
+    height: 80px;
+    width: 80px;
+    border: solid 1px #113916;
+}
+.pof{
+    width: 50%;
+    vertical-align: middle;
+}
+.pname{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.ptype{
+    font-size: 16px;
+}
+.progress{
+    width: 120px;
+    height: 20px;
+    border: solid 1px #113916;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+#pgs2{
+    background-color: #113916;
+}
+.pstate{
+    line-height: 80px;
+    color: #113916;
+}

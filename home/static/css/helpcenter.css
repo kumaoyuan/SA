@@ -1,0 +1,85 @@
+main{
+    width: 100%;
+}
+.title1{
+    font-size: 25px;
+    margin: 10px auto; 
+    width: 200px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.of{
+    width: 90%;
+    margin: 10px auto;
+}
+.wholeq{
+    width: 100%;
+    margin: 20px auto;
+}
+.question{
+    height: 35px;
+    line-height: 35px;
+    font-weight: bolder;
+    background-color: #113916;
+    border-radius: 5px;
+    padding-left: 5px;
+    color: white;
+}
+.panel{
+    height: auto;
+    padding: 10px;
+    margin: auto;
+    background-color: #cacaca;
+    border-radius: 5px;
+    display: none;
+}
+ul{
+    margin-left: 20px;
+}
+
+
+
+/*問題回報*/
+fieldset{
+    width: 300px;
+    height: 400px;
+    border-color: #eaeaea;
+    border-width: 8px;
+    margin: auto;
+    padding: 15px;
+}
+legend{
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+    font-weight: bolder;
+    color: #113916;
+}
+.title{
+    font-size: 18px;
+}
+.emip{
+    width: 180px;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px;
+}
+.qip{
+    width: 300px;
+    height: 200px;
+    background-color: transparent;
+    margin: 10px auto;
+    border: solid 1px;
+}
+.bt{
+    font-size: 18px;
+    width: 60px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.none{
+    height: 80px;
+}

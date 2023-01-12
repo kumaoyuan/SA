@@ -1,0 +1,42 @@
+main{
+    width: 100%;
+}
+.title{
+    font-size: 25px;
+    margin: 0 auto 10px; 
+    width: 200px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.of{
+    width: 90%;
+    margin: 10px auto;
+}
+.wholeq{
+    width: 100%;
+    margin: 20px auto;
+}
+.question{
+    height: 35px;
+    line-height: 35px;
+    font-weight: bolder;
+    background-color:  #113916;
+    border-radius: 5px;
+    padding-left: 5px;
+    color: #eaeaea;
+}
+.panel{
+    height: auto;
+    padding: 10px;
+    margin: auto;
+    background-color: #cacaca;
+    border-radius: 5px;
+}
+ul{
+    margin-left: 20px;
+}
+
+.none{
+    height: 80px;
+}

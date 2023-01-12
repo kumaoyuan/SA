@@ -1,0 +1,256 @@
+/**{  
+    outline: solid red 1px;
+}*/
+main{
+    width: 100%;
+}
+.none{
+    height: 80px;
+}
+
+
+/*搜尋欄*/
+.btimg{
+    width: 30px;
+}
+.m1img{
+    width: 25px;
+}
+.search{
+    width: 90%;
+    display:flex;
+    margin: 10px auto;
+}
+.search_box{
+    width:70%;
+    display: flex;
+    position:relative;
+}
+.search_btn{
+    width:25px;
+    height:25px;
+    background: none;
+    border:none;
+    position: absolute;
+    right:5%;
+    top:10px;
+}
+.search_bar{
+    width:100%;
+    font-size: 16px;
+    border-radius: 20px;
+    padding:10px;
+}
+.m1_point{
+    display:flex;
+    justify-content: center;
+    width:30%;
+}
+.m1_text{
+    font-size: 40px;
+    color: #113916;
+    padding:0 3px;
+}
+.m1_pic{
+    height:25px;
+    width:25px;
+    margin-top:12%;
+}
+.main_text{
+    margin:5% 0 0 0 ;
+}
+
+
+
+/*頁籤css*/
+.storecf{
+    height: 100%;
+    width: 100%;
+}
+#tab li a{
+    text-align: center;
+}
+#tab {
+    background: transparent;
+    margin-top: 10px;
+}
+/* 頁籤ul */
+#tab > ul {
+    /* overflow: hidden; */
+    padding: 10px 10px 0 10px;
+}
+
+#tab > ul > li {
+    list-style-type: none;
+}
+
+/* 頁籤上的文字 */
+#tab > ul > li > a { 
+    text-decoration: none;
+    font-size: 13px;
+    color: black;
+    float: left;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+/*頁籤div內容*/
+#tab > div {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+/*第一筆的底色*/
+span:target ~ #tab > ul li:first-child a {
+    color: black;
+    background: transparent;
+}
+
+span:target ~ #tab > div:first-of-type {
+    visibility: hidden;
+    height: 0;
+}
+
+/*頁籤變換&第一筆*/
+span ~ #tab > ul li:first-child a,
+#tab-1:target ~ #tab > ul li a[href$="#tab-1"],
+#tab-2:target ~ #tab > ul li a[href$="#tab-2"],
+#tab-3:target ~ #tab > ul li a[href$="#tab-3"],
+#tab-4:target ~ #tab > ul li a[href$="#tab-4"],
+#tab-5:target ~ #tab > ul li a[href$="#tab-5"],
+#tab-6:target ~ #tab > ul li a[href$="#tab-6"],
+#tab-7:target ~ #tab > ul li a[href$="#tab-7"] {
+    background: #113916;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+span ~ #tab > ul li:first-child a::before,
+#tab-1:target ~ #tab > ul li a[href$="#tab-1"]::before,
+#tab-2:target ~ #tab > ul li a[href$="#tab-2"]::before,
+#tab-3:target ~ #tab > ul li a[href$="#tab-3"]::before,
+#tab-4:target ~ #tab > ul li a[href$="#tab-4"]::before,
+#tab-5:target ~ #tab > ul li a[href$="#tab-5"]::before,
+#tab-6:target ~ #tab > ul li a[href$="#tab-6"]::before,
+#tab-7:target ~ #tab > ul li a[href$="#tab-7"]::before {
+    background-color: #eaeaea;
+    height: 100%;
+}
+
+/*頁籤內容顯示&第一筆*/
+span ~ #tab > div:first-of-type,
+#tab-1:target ~ #tab > div.tab-content-1,
+#tab-2:target ~ #tab > div.tab-content-2,
+#tab-3:target ~ #tab > div.tab-content-3,
+#tab-4:target ~ #tab > div.tab-content-4,
+#tab-5:target ~ #tab > div.tab-content-5,
+#tab-6:target ~ #tab > div.tab-content-6,
+#tab-7:target ~ #tab > div.tab-content-7 {
+    visibility: visible;
+    height: 100%;
+    width: 95%;
+    margin: auto;
+    border-top: solid 1px #113916;
+}
+
+span {
+    display: none;
+}
+
+
+/*商店*/
+.shop{
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.s-of{
+    padding: 10px;
+    width: 160px;
+    margin-right: 3px;
+}
+.shop1{
+    width:170px;
+    height:150px;
+    margin:3% 3%;
+    position:relative;
+    z-index: 1;
+}
+.shop_text{
+    position:absolute;
+    left:16%;
+    bottom:3%;
+    width:70%;
+}
+.shop_text_texts{
+    color:rgb(255, 255, 255);
+    background-color: rgba(73, 73, 73, 0.421);
+    border:2px solid white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bolder;
+    padding:2px;
+}
+#m3_s1_button{
+    position: absolute;
+    right:8px;
+    top:-8px;
+    background: none;
+    font-size: 45px;
+    border:0;
+    color:rgba(0, 0, 0, 0.609);
+}
+
+/*愛心*/
+.compassionbt{
+    position: absolute;
+    right:5px;
+    top:5px;
+    background-image: url("../img/compassion.png");
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    appearance: none;
+    outline: none;
+}
+.compassionbt:checked {
+    background-image: url("../img/com-click.png");
+    background-size: cover;
+}
+    
+
+
+/*展開兌換*/
+.panel{
+    width: 160px;
+    display: none;
+    padding: 10px;
+    background-color: #cacaca;
+    border-radius: 5px;
+    text-align: center;
+}
+.decrease, .increase{
+    font-size: 18px;
+}
+.quantity{
+    width: 40px;
+    font-size: 18px;
+    text-align: center;
+}
+.bt{
+    width: 50px;
+    font-size: 16px;
+    font-weight: bolder;
+    background-color: transparent;
+    border: solid 1px #113916;
+    margin-top: 10px;
+}
+h3 ,h4{
+    display: inline-block;
+}
+h4{
+    margin-bottom: 5px;
+}

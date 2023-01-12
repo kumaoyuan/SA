@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳志郎 | 911 Dakar</title>
+    <style>
+        @import url('{% static "css/publicversion.css"%}');
+        @import url('{% static "css/car1.css"%}');
+        @import url('{% static "css/car1_used.css"%}');
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <header>
+            <div class="ho">
+                <a href="../index/"><img src="{% static 'img/logo.png'%}" alt="logo圖" class="logo"></a>
+                <a href="../noticenter/"><img src="{% static 'img/alarm2.png'%}" alt="alarm鍵" class="alarm"></a>
+            </div>
+            <div class="splitline"></div>
+        </header>
+        <div class="none2"></div>
+        <main>
+        <form id="form1" action="../consume1/" method="get">
+            <div class="main">
+                <h2 class="car_title">\ {{carName}} /</h2>
+                <input type="Hidden" name="carName" value="{{carName}}">
+                <div class="car_pic">
+                    <h1 class="car_pic_title">-使用中-</h1>
+                    <img src="{% static carImg%}" style="height:100%;width:100%">
+                </div>
+                <div class="car_main">
+                    <h2>車牌號碼：{{carNum}}</h2>
+                    <input type="Hidden" name="carNum" value="{{carNum}}">
+                    <h2>剩餘時間：<div id="count_up_timer">00:00:00</div></h2>
+                    <input type="Hidden" name="usetime" id="usetime" value="">
+                    <input type="Hidden" name="realusepoint" id="realusepoint" value="">
+                    <h2>已累積花費碳點：<div id="realusepoint2"></div></h2>
+                    <input type="submit" name="end" value="提前結束">
+                </div>
+                <div class="none"></div>
+            </div>
+        </form>
+        </main>
+
+        <footer>
+            <div class="fo">
+                <a href="../index/"><img src="{% static 'img/home.png'%}" alt="home鍵" class="f"></a>
+                <a href="../member/"><img src="{% static 'img/member.png'%}" alt="member鍵" class="f"></a>
+                <a href="../ccmgt/"><img src="{% static 'img/creditcard.png'%}" alt="creditcard鍵" class="f"></a>
+                <a href="../shop/"><img src="{% static 'img/store.png'%}" alt="store鍵" class="f"></a>
+                <a href="../settings/"><img src="{% static 'img/setting.png'%}" alt="setting鍵" class="f"></a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        var timerVariable = setInterval(countUpTimer, 1000);
+        var totalSeconds = {{time}};
+        var a=0;
+        var Ev=parseInt({{carEv}},10);
+        var usetime=document.getElementById("usetime");
+        var usepoint=document.getElementById("realusepoint");
+        function countUpTimer() {
+        --totalSeconds;
+        a++;
+        var hour = Math.floor(totalSeconds / 3600);
+        var minute = Math.floor((totalSeconds - hour * 3600) / 60);
+        var seconds = totalSeconds - (hour * 3600 + minute * 60);
+        if(hour < 10)
+            hour = "0"+hour;
+        if(minute < 10)
+            minute = "0"+minute;
+        if(seconds < 10)
+            seconds = "0"+seconds;
+        usetime.value=""+a;
+        document.getElementById("count_up_timer").innerHTML = hour + ":" + minute + ":" + seconds;
+        document.getElementById("realusepoint2").innerHTML =Math.ceil(Ev*(Math.ceil(a/60))/1000).toString();
+        usepoint.value=Math.ceil(Ev*(Math.ceil(a/60))/1000).toString();
+        if(hour==0 && minute==0 && seconds==0){
+            document.getElementById('form1').submit();
+        }
+        
+        }
+    </script>
+</body>
+
+</html>

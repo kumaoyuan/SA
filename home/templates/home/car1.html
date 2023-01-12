@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳志郎 | 911 Dakar</title>
+    <style>
+        @import url('{% static "css/publicversion.css"%}');
+        @import url('{% static "css/car1.css"%}');
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <header>
+            <div class="ho">
+                <a href="../index/"><img src="{% static 'img/logo.png'%}" alt="logo圖" class="logo"></a>
+                <a href="../noticenter/"><img src="{% static 'img/alarm2.png'%}" alt="alarm鍵" class="alarm"></a>
+            </div>
+            <div class="splitline"></div>
+        </header>
+        <div class="none2"></div>
+        <main>
+            <div class="main">
+                <h2 class="car_title">\ {{carName}} /</h2>
+                <div class="car_pic">
+                    <img src="{% static carImg%}" style="height:100%;width:100%">
+                </div>
+                <form action="../car1_confirm/" method="get">
+                <div class="car_main">
+                    <h2>品牌：{{carbrand}}</h2>
+                    <input type="hidden" value="{{b}}" name="num">
+                    <div class="car_main_text1">
+                        <h2>使用時長：<input type="text" class="car_main_text2" name="useTime"> min</h2>
+                    </div>
+                    <div class="car_main_text3">
+                        <h2>車牌號碼：{{carNum}}</h2>
+                    </div>
+                    <div class="car_main_text4">
+                        <h2>車輛資訊：</h2>
+                        <table class="car_main_text4_table">
+                            <tr>
+                                <td class="text4_table">汽缸數：</td>
+                                <td class="text4_table1">6 ZAHL</td>
+                            </tr>
+                            <tr>
+                                <td class="text4_table">排氣量：</td>
+                                <td class="text4_table1">{{carEv}} cm³</td>
+                            </tr>
+                            <tr>
+                                <td class="text4_table">動力：</td>
+                                <td class="text4_table1">480 PS</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="car_main_text5">
+                        <h2>兌換資訊：</h2>
+                        <p class="car_main_text5_text">1.兌換所需花費的碳點將依照排氣量與租借時長做計算（排氣量cm³ X 分鐘數 /1000 小數部分無條件進位）
+                            2.兌換前請先輸入大約使用時長
+                            3.若結束時間超過租借時長，每分鐘將扣除雙倍碳點，直至結束
+                        </p>
+                    </div>
+                </div>
+                <div align="center">
+                <button class="car_btn">確認兌換</button>
+                </div>
+                </form>
+                <div class="none"></div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="fo">
+                <a href="../index/"><img src="{% static 'img/home.png'%}" alt="home鍵" class="f"></a>
+                <a href="../member/"><img src="{% static 'img/member.png'%}" alt="member鍵" class="f"></a>
+                <a href="../ccmgt/"><img src="{% static 'img/creditcard.png'%}" alt="creditcard鍵" class="f"></a>
+                <a href="../shop/"><img src="{% static 'img/store.png'%}" alt="store鍵" class="f"></a>
+                <a href="../settings/"><img src="{% static 'img/setting.png'%}" alt="setting鍵" class="f"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
